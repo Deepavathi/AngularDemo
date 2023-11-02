@@ -1,0 +1,20 @@
+<h3 (click)="sayHello()">Hello sample</h3>
+<p>{{title | uppercase}}</p>
+<!-- <ul>
+  <li *ngFor="let i of serviceData">
+    {{i}}
+  </li>
+</ul> -->
+<ul>
+  <li>
+    <a (click)="goToLoc('home')">Home</a>
+  </li>
+  <li>
+    <a (click)="goToLoc('aboutus')">About us</a>
+  </li>
+  <li>
+    <a (click)="goToLoc('contactus')">Contact us</a>
+  </li>
+</ul>
+
+<router-outlet></router-outlet>

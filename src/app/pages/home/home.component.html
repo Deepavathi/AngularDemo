@@ -1,0 +1,23 @@
+<p>home works!</p>
+<button (click)="loadServiceData()">Load Data</button>
+<div *ngIf="isLoading==true">
+    Loading...
+</div>
+<div *ngIf="isLoading==false">
+    <!-- <ul>
+        <li *ngFor="let i of serviceData">
+            {{i.title}}
+        </li>
+    </ul> -->
+    <div class="card-container">
+        <div class="card-widget" *ngFor="let photo of serviceData">
+            <!-- <div class="card-thumbnail">
+                <img [src]="photo.thumbnailUrl" />
+            </div> -->
+            <div class="card-desc">
+                <div class="card-title">{{photo.title}}</div>
+            </div>
+        </div>
+    </div>
+
+</div>

@@ -1,0 +1,41 @@
+<h2>Contact us form</h2>
+
+<form [formGroup]="contactusFormGroup">
+    <div class="form-group">
+        <label>Name</label>
+        <input type="text" formControlName="name" />
+        <label *ngIf="!contactusFormGroup.controls.name.valid">This field is required</label>
+    </div>
+    <div class="form-group">
+        <label>Email</label>
+        <input type="text" formControlName="email" />
+        <label *ngIf="!contactusFormGroup.controls.email.valid">Invalid input</label>
+    </div>
+    <div class="form-group">
+        <label>Mobile</label>
+        <input type="text" formControlName="mobile" />
+    </div>
+
+    <div class="form-group">
+        <button (click)="submitContactInfo()" [disabled]="contactusFormGroup.invalid">Submit contact
+            info</button>
+    </div>
+</form>
+<!-- <form>
+    <div class="form-group">
+        <label>Name</label>
+        <input type="text" [(ngModel)]="contactusFormGroup.name" name="name" />
+        <label *ngIf="contactusFormGroup.name==''">This field is required</label>
+    </div>
+    <div class="form-group">
+        <label>Email</label>
+        <input type="text" [(ngModel)]="contactusFormGroup.email" name="email" />
+    </div>
+    <div class="form-group">
+        <label>Mobile</label>
+        <input type="text" [(ngModel)]="contactusFormGroup.mobile" name="mobile" />
+    </div>
+    <div class="form-group">
+        <button (click)="submitContactInfo()">Submit contact info</button>
+    </div>
+</form> -->
